@@ -2,9 +2,6 @@
 <p>Find me in app/views/products/index.html.erb</p>
 
 <% @products.each do |product| %>
-  <div>
-    <h2><%= link_to product.title, product_path(product) %></h2>
-    <p>Price: <%= product.price %></p>
-    <p>Stock Quantity: <%= product.stock_quantity %></p>
-  </div>
+  <p><%= link_to product.title, product_path(product) %> - <%= product.category.name %></p>
 <% end %>
+
